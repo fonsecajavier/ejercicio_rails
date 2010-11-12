@@ -1,0 +1,11 @@
+<%=flash[:notice]%>
+<% form_for(@account) do |f| %>
+  <%= f.error_messages%>
+  <p><%= f.label "*Name of the account" %></p>
+  <p><%= f.text_field :name %></p>
+
+  <p><%= f.label "*Name of the bank" %></p>
+  <p><%= f.text_field :bank_name %></p>
+  <p>* means it's a mandatory field</p>
+  <p><%= f.submit "Create" %></p>
+<% end %>
