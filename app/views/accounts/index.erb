@@ -1,0 +1,30 @@
+<% @page_title = "List of accounts" %>
+<table>
+  <tr>
+    <th>Account name</th>
+    <th>Bank name</th>
+    <th># of people</th>
+    <th>Actions</th>
+  </tr>
+  <% @accounts.each do |account|%>
+    <tr>
+      <td><%= h account.name %></td>
+      <td><%= h account.bank_name %></td>
+      <td>
+        <%= account.count_employees %>
+        <%= link_to "(List)", account %>
+      </td>
+      <td>
+        <%= link_to "Edit", edit_account_path(account) %>
+        <%#= link_to "Edit", :action => :edit, :id => account.id %> | 
+        <%= link_to "Delete", account,
+                              { :class => "dangerous",
+                                :confirm => "Are you sure?\n\nThis will delete the account and all people associated to it",
+                                :method => :delete
+                              }
+        %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<p><%= link_to "Add new account", new_account_path %></p>

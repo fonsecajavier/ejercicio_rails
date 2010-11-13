@@ -1,0 +1,108 @@
+/* 
+    Document   : simple
+    Created on : Nov 12, 2010, 9:45:40 PM
+    Author     : koombea
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body{
+    background-color: #CCFF99;
+    margin:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+
+#content{
+    border: 1px solid #000000;
+    background-color: #AAFFCC;
+    padding:10px 10px 30px 30px;
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+}
+
+a {
+	text-decoration: none;
+	color: #135CAB;
+}
+
+a:hover {
+}
+
+table {
+    background-color: #FFDD00;
+    border: 1px black solid;
+}
+th {
+    padding:10px;
+    border-right: 1px black solid;
+}
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px black solid;
+    background-color: #FFFF55;
+}
+
+.fieldWithErrors {
+    padding: 2px;
+    background-color: #EEFFEE;
+    display: inline;
+}
+.fieldWithErrors * {
+    background-color: #FFAA99;
+}
+#errorExplanation {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0 ;
+}
+
+#errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00 ;
+    color: #fff ;
+}
+#errorExplanation p {
+    color: #333 ;
+    margin-bottom: 0;
+    padding: 5px;
+}
+#errorExplanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.0em;
+}
+#flash_notice {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size:1.3em;
+    background-color: #f8f8f8 ;
+}

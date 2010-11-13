@@ -1,5 +1,5 @@
-<% @page_title = "New employee" %>
-<p>Adding employee to account <em><%= h @account.name %></em></p>
+<% @page_title = "Editing employee" %>
+<p>Editing employee of account <em><%= h @account.name %></em></p>
 <% form_for([@account, @employee]) do |f| %>
   <%= f.error_messages%>
   <p><%= f.label "*First Name" %></p>
@@ -12,6 +12,6 @@
   <p><%= f.text_field :salary %></p>
 
   <p>* means it's a mandatory field</p>
-  <p><%= f.submit "Create" %></p>
+  <p><%= f.submit "Update" %></p>
 <% end %>
 <p><%= link_to "Back to the list of employees", @account %></p>

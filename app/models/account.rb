@@ -13,4 +13,9 @@ class Account < ActiveRecord::Base
                         :message => "must not be empty"
   validates_length_of :bank_name,
                       :maximum => 255
+
+  def count_employees
+    Employee.count :conditions => ["account_id = :account_id", {:account_id=>id}]
+  end
+
 end

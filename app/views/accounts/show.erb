@@ -1,0 +1,43 @@
+<% @page_title = "Account details" %>
+<ul>
+  <li>Account name: <%= h @account.name%></li>
+  <li>Bank name: <%= h @account.bank_name%></li>
+
+</ul>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Salary</th>
+    <th>Actions</th>
+  </tr>
+  <h2>List of employees associated to this account:</h2>
+  <% @employees.each do |employee|%>
+    <tr>
+      <td><%= h employee.first_name %></td>
+      <td><%= h employee.last_name %></td>
+      <td><%= number_to_currency((h employee.salary), :precision => 0) %></td>
+      <td>
+          <%= link_to "Edit",
+                              :action => :edit,
+                              :controller => "employees",
+                              :id => employee.id,
+                              :account_id => employee.account_id
+          %> |
+          <%= link_to "Delete",
+                              { :action => :destroy,
+                                :controller => "employees",
+                                :id => employee.id,
+                                :account_id => employee.account_id},
+                              { :class => "dangerous",
+                                :confirm => "Are you sure you want to delete this employee?",
+                                :method => :delete}
+
+          %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<p><%= link_to "Add new employee", new_account_employee_path(@account) %>
+</p>
+<p><%= link_to "Back to the list of accounts", accounts_path %></p>

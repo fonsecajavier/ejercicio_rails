@@ -40,5 +40,9 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
-  map.resources :accounts, :has_many => :employees
+  map.root :controller => "accounts"
+  map.resources :accounts do |account|
+    account.resources :employees
+  end
+
 end
