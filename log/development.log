@@ -15524,3 +15524,37 @@ Completed in 43ms (View: 23, DB: 1) | 200 OK [http://localhost/accounts/15]
   [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
   [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
   [4;36;1mEmployee Load (0.4ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAccount Load (0.9ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mEmployee Load (84.7ms)[0m   [0mSELECT * FROM "employees" [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = '41') LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = '16') LIMIT 1[0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = '16') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = '17') LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = '17') LIMIT 1[0m
+  [4;35;1mEmployee Load (1.1ms)[0m   [0mSELECT * FROM "employees" [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 16) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 16) [0m
+  [4;35;1mEmployee Load (0.7ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;36;1mEmployee Destroy (0.5ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 42[0m
+  [4;35;1mEmployee Destroy (0.2ms)[0m   [0mDELETE FROM "employees" WHERE "id" = 45[0m
+  [4;36;1mEmployee Destroy (0.1ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 46[0m
+  [4;35;1mAccount Destroy (0.4ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 16[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 16) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 16) [0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;35;1mEmployee Load (0.3ms)[0m   [0mSELECT * FROM "employees" [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 16) [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 19) [0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 19) [0m
+  [4;35;1mAccount Destroy (1.3ms)[0m   [0mDELETE FROM "accounts" WHERE "id" = 19[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" [0m

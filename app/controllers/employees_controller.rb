@@ -3,15 +3,15 @@ class EmployeesController < ApplicationController
   before_filter :find_account
 
   def new
-    @employee = @account.employee.new
+    @employee = @account.employees.new
   end
 
   def edit
-    @employee = Employee.find(params[:id])
+    @employee = @account.employees.find(params[:id])
   end
 
   def create
-    @employee = @account.employee.new(params[:employee])
+    @employee = @account.employees.new(params[:employee])
     if(@employee.save)
       flash[:notice] = "Employee #{@employee.first_name} #{@employee.last_name} created"
       flash.keep
@@ -22,7 +22,7 @@ class EmployeesController < ApplicationController
   end
 
   def update
-    @employee = Employee.find(params[:id])
+    @employee = @account.employees.find(params[:id])
     if @employee.update_attributes(params[:employee])
       flash[:notice] = "Employee #{@employee.first_name} #{@employee.last_name} updated"
       flash.keep
@@ -33,8 +33,7 @@ class EmployeesController < ApplicationController
   end
 
   def destroy
-    @employee = Employee.find(params[:id])
-    @employee.destroy
+    @employee = @account.employees.find(params[:id]).destroy
     flash[:notice] = "Employee #{@employee.first_name} #{@employee.last_name} deleted"
     flash.keep
     redirect_to(account_path(@employee.account_id))

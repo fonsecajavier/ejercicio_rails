@@ -13,7 +13,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
-    @employees = @account.employee
+    @employees = @account.employees
   end
 
   def create
@@ -39,11 +39,7 @@ class AccountsController < ApplicationController
   end
 
   def destroy
-    @account = Account.find(params[:id])
-    Employee.find_all_by_account_id(params[:id]).each { |i|
-      i.destroy
-    }
-    @account.destroy
+    @account = Account.find(params[:id]).destroy
     flash[:notice] = "Account #{@account.name} deleted"
     flash.keep
     redirect_to(accounts_url)

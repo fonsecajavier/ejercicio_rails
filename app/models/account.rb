@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  has_many :employee, :dependent => :destroy
+  has_many :employees, :dependent => :destroy
 
   validates_presence_of :name,
                         :message => "must not be empty"
@@ -13,9 +13,5 @@ class Account < ActiveRecord::Base
                         :message => "must not be empty"
   validates_length_of :bank_name,
                       :maximum => 255
-
-  def count_employees
-    employee.count
-  end
 
 end
