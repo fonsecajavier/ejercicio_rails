@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-  has_many :employee
+  has_many :employee, :dependent => :destroy
 
   validates_presence_of :name,
                         :message => "must not be empty"
@@ -15,7 +15,7 @@ class Account < ActiveRecord::Base
                       :maximum => 255
 
   def count_employees
-    Employee.count :conditions => ["account_id = :account_id", {:account_id=>id}]
+    employee.count
   end
 
 end

@@ -13,7 +13,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
-    @employees = Employee.find_all_by_account_id(params[:id], :order => "last_name, first_name")
+    @employees = @account.employee
   end
 
   def create

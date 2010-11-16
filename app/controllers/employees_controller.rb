@@ -11,8 +11,7 @@ class EmployeesController < ApplicationController
   end
 
   def create
-    @employee = Employee.new(params[:employee])
-    @employee.account_id = @account.id
+    @employee = @account.employee.new(params[:employee])
     if(@employee.save)
       flash[:notice] = "Employee #{@employee.first_name} #{@employee.last_name} created"
       flash.keep

@@ -15471,3 +15471,56 @@ Processing AccountsController#show (for 127.0.0.1 at 2010-11-12 23:14:18) [GET]
 Rendering template within layouts/application
 Rendering accounts/show
 Completed in 43ms (View: 23, DB: 1) | 200 OK [http://localhost/accounts/15]
+  [4;36;1mEmployee Load (0.7ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.7ms)[0m   [0;1mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mEmployee Load (0.4ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" ORDER BY accounts.id DESC LIMIT 1[0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;36;1mEmployee Load (0.4ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;35;1mEmployee Load (0.3ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;36;1mAccount Load (0.6ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;35;1mEmployee Load (0.8ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 16) [0m
+  [4;35;1mEmployee Load (0.8ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees".account_id = 17) [0m
+  [4;36;1mEmployee Load (0.3ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".account_id = 18) [0m
+  [4;35;1mAccount Load (0.6ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" [0m
+  [4;36;1mEmployee Load (0.4ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
