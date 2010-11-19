@@ -1,17 +1,4 @@
 <% @page_title = "New employee" %>
-<p>Adding employee to account <em><%= h @account.name %></em></p>
-<% form_for([@account, @employee]) do |f| %>
-  <%= f.error_messages%>
-  <p><%= f.label "*First Name" %></p>
-  <p><%= f.text_field :first_name %></p>
-
-  <p><%= f.label "*Last Name" %></p>
-  <p><%= f.text_field :last_name %></p>
-
-  <p><%= f.label "*Salary" %></p>
-  <p><%= f.text_field :salary %></p>
-
-  <p>* means it's a mandatory field</p>
-  <p><%= f.submit "Create" %></p>
-<% end %>
-<p><%= link_to "Back to the list of employees", @account %></p>
+<p>Creating employee to account <em><%= h @account.name %></em></p>
+<%= render :partial => "employees/form", :locals => {:account => @account,
+                                                     :employee => @employee} %>

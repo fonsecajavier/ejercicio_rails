@@ -15,7 +15,7 @@ class EmployeesController < ApplicationController
     if(@employee.save)
       flash[:notice] = "Employee #{@employee.first_name} #{@employee.last_name} created"
       flash.keep
-      redirect_to(account_url(@account))
+      redirect_to(account_path(@account))
     else
       render :new
     end
@@ -43,7 +43,7 @@ private
 
   def find_account
     @account = Account.find(params[:account_id])
-    return(redirect_to(accounts_url)) unless @account
+    return(redirect_to(account_path)) unless @account
   end
 
 end

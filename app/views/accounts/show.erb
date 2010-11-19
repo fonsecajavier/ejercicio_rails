@@ -12,20 +12,20 @@
     <th>Actions</th>
   </tr>
   <h2>List of employees associated to this account:</h2>
-  <% @employees.each do |employee|%>
+  <% @account.employees.each do |employee|%>
     <tr>
       <td><%= h employee.first_name %></td>
       <td><%= h employee.last_name %></td>
       <td><%= number_to_currency((h employee.salary), :precision => 0) %></td>
       <td>
           <%= link_to "Edit",
-                              :action => :edit,
+                              :action => "edit",
                               :controller => "employees",
                               :id => employee.id,
                               :account_id => employee.account_id
           %> |
           <%= link_to "Delete",
-                              { :action => :destroy,
+                              { :action => "destroy",
                                 :controller => "employees",
                                 :id => employee.id,
                                 :account_id => employee.account_id},

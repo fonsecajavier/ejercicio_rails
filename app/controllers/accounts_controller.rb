@@ -13,7 +13,6 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
-    @employees = @account.employees
   end
 
   def create
@@ -21,7 +20,7 @@ class AccountsController < ApplicationController
     if(@account.save)
       flash[:notice] = "Account #{@account.name} created"
       flash.keep
-      redirect_to(accounts_url)
+      redirect_to(accounts_path)
     else
       render :new
     end
@@ -32,7 +31,7 @@ class AccountsController < ApplicationController
     if @account.update_attributes(params[:account])
       flash[:notice] = "Account #{@account.name} updated"
       flash.keep
-      redirect_to(accounts_url)
+      redirect_to(accounts_path)
     else
       render :edit
     end
@@ -42,7 +41,7 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id]).destroy
     flash[:notice] = "Account #{@account.name} deleted"
     flash.keep
-    redirect_to(accounts_url)
+    redirect_to(accounts_path)
   end
 
 end
