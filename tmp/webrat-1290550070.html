@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Bank System</title>
+  <meta name="generator" content="TextMate http://macromates.com/">
+  <meta name="author" content="Javier">
+  <link href="/stylesheets/simple.css?1289619346" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="content">
+    <h1>
+      Editing account
+    </h1>
+    
+    
+<form action="/accounts/2" class="edit_account" id="edit_account_2" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /></div>
+  
+  <p><label for="account_name">* Name of the account</label></p>
+  <p><input id="account_name" name="account[name]" size="30" type="text" value="Business" /></p>
+
+  <p><label for="account_bank_name">* Name of the bank</label></p>
+  <p><input id="account_bank_name" name="account[bank_name]" size="30" type="text" value="Lord's Bank" /></p>
+  <p>* means it's a mandatory field</p>
+  <p><input id="account_submit" name="commit" type="submit" value="Update" /></p>
+</form>
+  
+<p><a href="/accounts">Back to the list of accounts</a></p>
+  </div>
+</body>
+</html>

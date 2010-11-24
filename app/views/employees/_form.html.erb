@@ -1,12 +1,12 @@
 <% form_for([account, employee]) do |f| %>
   <%= f.error_messages%>
-  <p><%= f.label "*First Name" %></p>
+  <p><%= f.label :first_name, "* First Name" %></p>
   <p><%= f.text_field :first_name %></p>
 
-  <p><%= f.label "*Last Name" %></p>
+  <p><%= f.label :last_name, "* Last Name" %></p>
   <p><%= f.text_field :last_name %></p>
 
-  <p><%= f.label "*Salary" %></p>
+  <p><%= f.label :salary, "* Salary" %></p>
   <p><%= f.text_field :salary %></p>
 
   <p>* means it's a mandatory field</p>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Bank System</title>
+  <meta name="generator" content="TextMate http://macromates.com/">
+  <meta name="author" content="Javier">
+  <link href="/stylesheets/simple.css?1289619346" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="content">
+    <h1>
+      List of accounts
+    </h1>
+    
+    
+<table id="accounts_table">
+  <tr>
+    <th>Account name</th>
+    <th>Bank name</th>
+    <th># of people</th>
+    <th>Actions</th>
+  </tr>
+  
+  <tr>
+      <td>Business</td>
+      <td>Lord's Bank</td>
+      <td>
+        0
+        <a href="/accounts/2">(List)</a>
+      </td>
+      <td>
+        <a href="/accounts/2/edit">Edit</a>
+         | 
+        <a href="/accounts/2" class="dangerous" onclick="if (confirm('Are you sure?\n\nThis will delete the account and all people associated to it')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a>
+      </td>
+    </tr>
+  
+  <tr>
+      <td>Child</td>
+      <td>Lord's Bank</td>
+      <td>
+        0
+        <a href="/accounts/4">(List)</a>
+      </td>
+      <td>
+        <a href="/accounts/4/edit">Edit</a>
+         | 
+        <a href="/accounts/4" class="dangerous" onclick="if (confirm('Are you sure?\n\nThis will delete the account and all people associated to it')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a>
+      </td>
+    </tr>
+  
+  <tr>
+      <td>Extra</td>
+      <td>Tech Bank</td>
+      <td>
+        0
+        <a href="/accounts/5">(List)</a>
+      </td>
+      <td>
+        <a href="/accounts/5/edit">Edit</a>
+         | 
+        <a href="/accounts/5" class="dangerous" onclick="if (confirm('Are you sure?\n\nThis will delete the account and all people associated to it')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a>
+      </td>
+    </tr>
+  
+  <tr>
+      <td>Personal</td>
+      <td>Megabank</td>
+      <td>
+        0
+        <a href="/accounts/1">(List)</a>
+      </td>
+      <td>
+        <a href="/accounts/1/edit">Edit</a>
+         | 
+        <a href="/accounts/1" class="dangerous" onclick="if (confirm('Are you sure?\n\nThis will delete the account and all people associated to it')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a>
+      </td>
+    </tr>
+  
+  <tr>
+      <td>Professional</td>
+      <td>Geobank</td>
+      <td>
+        0
+        <a href="/accounts/3">(List)</a>
+      </td>
+      <td>
+        <a href="/accounts/3/edit">Edit</a>
+         | 
+        <a href="/accounts/3" class="dangerous" onclick="if (confirm('Are you sure?\n\nThis will delete the account and all people associated to it')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a>
+      </td>
+    </tr>
+  
+</table>
+<p><a href="/accounts/new">Add new account</a></p>
+
+  </div>
+</body>
+</html>

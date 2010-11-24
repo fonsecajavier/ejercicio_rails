@@ -1,5 +1,5 @@
 <% @page_title = "List of accounts" %>
-<table>
+<table id="accounts_table">
   <tr>
     <th>Account name</th>
     <th>Bank name</th>
@@ -7,7 +7,7 @@
     <th>Actions</th>
   </tr>
   <% @accounts.each do |account|%>
-    <tr>
+  <tr>
       <td><%= h account.name %></td>
       <td><%= h account.bank_name %></td>
       <td>
